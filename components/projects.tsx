@@ -14,7 +14,7 @@ export default function Projects() {
         <section ref={ref} id='projects' className='scroll-mt-28 mb-28'>
             <SectionHeading>My Projects</SectionHeading>
             <div className="">
-                {projectsData.filter(x => projectIdArray.includes(x.projectId)).toReversed().map((project, index) => (
+                {projectsData.filter(x => projectIdArray.includes(x.projectId)).reverse().map((project, index) => (
                     <React.Fragment key={index}>
                         <ProjectCard {...project} />
                     </React.Fragment>
