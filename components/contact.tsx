@@ -16,7 +16,7 @@ export default function Contact() {
     const [formValue, setFormValue] = useState("");
 
     const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-    const cooldownPeriod = 120000; // Adjust the cooldown period in milliseconds 
+    const cooldownPeriod = 300000; // Adjust the cooldown period in milliseconds - 5 min
     const textAreaWordLimit = 500; // word limit for message text area for contact form
     const textAreaMinimumLength = 5;
 
@@ -48,7 +48,7 @@ export default function Contact() {
         <motion.section
             id="contact"
             ref={ref}
-            className='mb-20 sm:mb-28 w-[min(100%,38rem)] text-center'
+            className='mb-20 sm:mb-28 mt-14 w-[min(100%,38rem)] text-center'
             initial={{
                 opacity: 0
             }}

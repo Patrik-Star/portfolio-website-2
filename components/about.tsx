@@ -31,7 +31,7 @@ export default function About() {
         <span className="font-medium">
           React, Node.js, TypeScript, and DynamoDB
         </span>
-        . I am currently looking for a{" "}
+        . I am always on the lookout for a{" "}
         <span className="font-medium">full-time position</span> as a Full-Stack software
         developer.
       </p>
