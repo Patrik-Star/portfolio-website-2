@@ -5,6 +5,7 @@ import { skillsData } from '@/lib/data'
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 import { shuffleArray } from '@/lib/utils';
+import { useTheme } from '@/context/theme-context';
 
 const fadeInAnimationVariants = {
     initial: {
@@ -23,13 +24,18 @@ const fadeInAnimationVariants = {
 export default function Skills() {
 
     const { ref } = useSectionInView('Skills');
-    const [colorArray, setColorArray] = useState('');
+    const [baseColor, setBaseColor] = useState('');
+
+    const {theme, toggleTheme} = useTheme()
 
     useEffect(() => {
-        const newColorArray = shuffleArray(["#00ff00", '#ff0000', '#0000ff']);
-        console.log(newColorArray);
-        setColorArray(newColorArray);
-    }, [])
+        if(theme === "light"){
+            setBaseColor("rgb(255, 255, 255 / 1.0)")
+        }else{
+            setBaseColor("rgb(255, 255, 255 / 0.1)")
+        }
+
+    }, [theme])
 
 
     return (
@@ -39,7 +45,7 @@ export default function Skills() {
                 {skillsData.map((skill, index) => (
                     <motion.li
                         key={index}
-                        className={`bg-white borderBlack rounded-xl text-sm px-4 py-2 sm:text-lg sm:px-5 sm:py-3 shadow-lg dark:bg-white/10 dark:text-white/80`}
+                        className={`bg-white text-gray-900 borderBlack rounded-xl text-sm px-4 py-2 sm:text-lg sm:px-5 sm:py-3 shadow-lg dark:bg-white/10 dark:text-white/80`}
                         variants={fadeInAnimationVariants}
                         initial="initial"
                         whileInView='animate'
@@ -54,7 +60,7 @@ export default function Skills() {
                         // transition={{ type: "spring", stiffness: 400, damping: 10, duration: 3 }}
                         whileTap={{
                             scale: 0.9,
-                            backgroundColor: ["rgb(255 255 255 / 1.0)" ,"#00ff00", '#ff0000', '#0000ff']
+                            backgroundColor: [baseColor, "#00ff00", '#ff0000', '#0000ff']
                         }}
                         custom={index}>
                         {skill}
