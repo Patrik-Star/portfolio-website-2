@@ -4,7 +4,6 @@ import SectionHeading from './section-heading'
 import { skillsData } from '@/lib/data'
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import { shuffleArray } from '@/lib/utils';
 import { useTheme } from '@/context/theme-context';
 
 const fadeInAnimationVariants = {
@@ -26,7 +25,7 @@ export default function Skills() {
     const { ref } = useSectionInView('Skills');
     const [baseColor, setBaseColor] = useState('');
 
-    const {theme, toggleTheme} = useTheme()
+    const {theme } = useTheme()
 
     useEffect(() => {
         if(theme === "light"){
@@ -55,9 +54,7 @@ export default function Skills() {
                         whileHover={{
                             scale: 1.2,
                             transition: { duration: 0.1 },
-                            // backgroundColor: ["rgb(255 255 255 / 1.0)"].concat(colorArray),
                         }}
-                        // transition={{ type: "spring", stiffness: 400, damping: 10, duration: 3 }}
                         whileTap={{
                             scale: 0.9,
                             backgroundColor: [baseColor, "#00ff00", '#ff0000', '#0000ff']
