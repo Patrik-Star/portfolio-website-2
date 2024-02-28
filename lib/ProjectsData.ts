@@ -99,7 +99,7 @@ export const projectsData = [
         projectType: "Frontend",
         date: "Feb 2024",
         description: " ",
-        tags: ["Mulesoft", "Anypoint", "Anypoint Exchange", "Anypoint Experience Hub", "Salesforce", "HTML", "CSS", ""],
+        tags: ["Mulesoft", "Anypoint", "Anypoint Exchange", "Anypoint Experience Hub", "Salesforce", "HTML", "CSS"],
         link: "Internal Project",
         imageUrl: "",
     },
