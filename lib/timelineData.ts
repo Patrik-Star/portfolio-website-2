@@ -103,6 +103,10 @@ export const timelineData = [
                 "date": "2023",
                 "title": "Carbon Offset",
                 "body": "I thoroughly enjoyed this project! I had a great time in developing a full stack web application with a well oiled agile team. I had the privilage of having access to senior developers that taught me best coding practices and to improve the quality of my code."
+            },{
+                "date": "2024",
+                "title": "Mulesoft Experience Hub",
+                "body": "This project was using a no-code platform called Anypoint Experience hub, which was developed by Mulesoft. It was a challenging time to learn how to use this platform, resolving technical issues and working with Mulesoft/Salesforce to get assistance on complex technical issues. "
             }
         ]
     }
