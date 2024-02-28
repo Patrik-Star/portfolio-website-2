@@ -98,7 +98,7 @@ export const projectsData = [
         place: "IAG",
         projectType: "Frontend",
         date: "Feb 2024",
-        description: " ",
+        description: "This project was using a no-code platform called Anypoint Experience hub, which was developed by Mulesoft. I was able to deliver an API developer portal using Anypoint Exchange and Experience hub, incorporating Salesforce Identity management.",
         tags: ["Mulesoft", "Anypoint", "Anypoint Exchange", "Anypoint Experience Hub", "Salesforce", "HTML", "CSS"],
         link: "Internal Project",
         imageUrl: "",
