@@ -92,4 +92,15 @@ export const projectsData = [
         link: "",
         imageUrl: "",
     },
+    {
+        projectId: 8,
+        title: "Mulesoft Experience Hub", 
+        place: "IAG",
+        projectType: "Frontend",
+        date: "Feb 2024",
+        description: " ",
+        tags: ["Mulesoft", "Anypoint", "Anypoint Exchange", "Anypoint Experience Hub", "Salesforce", "HTML", "CSS", ""],
+        link: "Internal Project",
+        imageUrl: "",
+    },
 ] as const
