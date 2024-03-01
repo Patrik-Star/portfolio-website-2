@@ -80,7 +80,7 @@ export const timelineData = [
     {
         "subtitle": "Datacom",
         "main": "Time to learn everything!",
-        "body": "Welcome to being a software developer in the largest software development company in New Zealand.",
+        "body": "Working with numerous clients to deliver high quaility software products.",
         "button": "",
         "href": "",
         "cards": [

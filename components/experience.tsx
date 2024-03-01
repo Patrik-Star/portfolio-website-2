@@ -19,7 +19,7 @@ export default function Experience() {
             <SectionHeading >My Experience</SectionHeading>
 
             <VerticalTimeline lineColor=''>
-                {experiencesData.map((item, index) => (
+                {experiencesData.toReversed().map((item, index) => (
                     <React.Fragment key={index} >
                         <VerticalTimelineElement visible contentStyle={{
                             background: theme === "light" ? "#fsf4f6" : "rgba(255,255,255,0.05)",

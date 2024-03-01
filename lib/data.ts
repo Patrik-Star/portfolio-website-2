@@ -47,7 +47,7 @@ export const experiencesData = [
     title: "Graduated University",
     location: "Auckland",
     description:
-      "Went to the univerity of Auckland, completed a bachalors degree in Computer Science.",
+      "Completed a bachalors degree in Computer Science at the University of Auckland.",
     icon: React.createElement(LuGraduationCap),
     date: "2022",
   },
@@ -55,7 +55,7 @@ export const experiencesData = [
     title: "Full-Stack Developer",
     location: "Datacom NZ",
     description:
-      "Welcome to being a software developer in the largest software development company in New Zealand.",
+      "Working with numerous clients to deliver high quaility software products.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - present",
   },
@@ -104,4 +104,7 @@ export const skillsData = [
   'VS Code',
   'Pycharm',
   'Intellij',
+  'Mulesoft',
+  'Anypoint Experience Hub',
+  'Salesforce'
 ] as const;

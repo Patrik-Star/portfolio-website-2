@@ -20,7 +20,8 @@ export default function Projects() {
                     </React.Fragment>
                 ))}
             </div>
-            <div className="flex justify-end pt-5 ">
+            <div className="flex justify-between pt-5 ">
+                <p className='text-gray-400'>Total Projects: {projectsData.length}</p>
                 <Link className='bg-gray-800 text-white py-2 px-4 rounded-full font-medium 
                 hover:scale-105 hover:bg-gray-700' href="/projects">More Projects</Link>
             </div>
