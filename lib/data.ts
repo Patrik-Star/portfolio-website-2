@@ -36,12 +36,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Mobile App Developer",
-    location: "Appworx ltd",
+    title: "Full-Stack Developer",
+    location: "Datacom NZ",
     description:
-      "In my final year at University, I got a software development internship as an intern developer at Appworx.",
+      "Working with numerous clients to deliver high quaility software products.",
     icon: React.createElement(CgWorkAlt),
-    date: "2021",
+    date: "2022 - present",
   },
   {
     title: "Graduated University",
@@ -52,12 +52,12 @@ export const experiencesData = [
     date: "2022",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Datacom NZ",
+    title: "Mobile App Developer",
+    location: "Appworx ltd",
     description:
-      "Working with numerous clients to deliver high quaility software products.",
+      "In my final year at University, I got a software development internship as an intern developer at Appworx.",
     icon: React.createElement(CgWorkAlt),
-    date: "2022 - present",
+    date: "2021",
   },
 ] as const;
 
