@@ -16,7 +16,7 @@ export default function Project() {
                         dark:bg-white/10
                         dark:text-white/90 `}>
                             <div className="">
-                                <h3 className="text-3xl fond-bold mb-2 hover:font-semibold">
+                                <h3 className="text-3xl fond-bold mb-2">
                                     {project.title}
                                 </h3>
                                 <div className="text-xs">
