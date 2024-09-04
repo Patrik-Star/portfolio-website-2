@@ -121,7 +121,7 @@ export const projectsData = [
         projectType: "Full-Stack",
         date: "June 2024",
         description: "Developing in React, and by writing GraphQL queries, I was able to deliver high performance React components that incorporated server-side validation and pagination So that we can follow industry best practices for frontend developing to insure we deliviered the best solution possible to our customer.",
-        tags: ["ReactJS", "Mantine UI", "Typescript", "Figma", "Jira", "GraphQL", "MS SQL", "GitLab","Teamwork", "Agile"],
+        tags: ["ReactJS", "Mantine UI", "Typescript", ".NET", "C#", "Figma", "Jira", "GraphQL", "MS SQL", "GitLab","Teamwork", "Agile"],
         link: "https://www.pacificedgedx.com/",
         imageUrl: "",
     },
