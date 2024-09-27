@@ -49,7 +49,7 @@ export default function Slideshow() {
   };
 
   return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory w-full z-[999]">
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory w-full z-[999] text-black">
       <button
         className="absolute top-3 left-3 bg-gray-100 p-3 rounded-lg"
         onClick={handleHome}
