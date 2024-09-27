@@ -65,7 +65,7 @@ const OTPCard: React.FC<OTPCardProps> = ({ title, subtitle, onVerify }) => {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
+    <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full text-black">
       <h1 className="text-2xl font-bold text-center mb-2">{title}</h1>
       <p className="text-gray-600 text-center mb-6">{subtitle}</p>
       {!showError ? (
@@ -125,7 +125,7 @@ export default function OTPPage() {
   };
 
   return (
-    <div className="absolute top-0 w-full h-screen bg-green-100 flex flex-col items-center justify-center text-white">
+    <div className="absolute top-0 w-full h-screen bg-green-100 flex flex-col items-center justify-center text-black">
       {!isVerified ? (
         <OTPCard
           title="Enter our ANNIVERSARY date"
