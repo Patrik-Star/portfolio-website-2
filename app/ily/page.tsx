@@ -75,7 +75,7 @@ const OTPCard: React.FC<OTPCardProps> = ({ title, subtitle, onVerify }) => {
               <input
                 key={index}
                 ref={(el) => (inputRefs.current[index] = el)}
-                type="text"
+                type="number"
                 maxLength={1}
                 value={digit}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
