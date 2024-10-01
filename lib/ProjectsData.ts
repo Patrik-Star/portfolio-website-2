@@ -125,4 +125,15 @@ export const projectsData = [
         link: "https://www.pacificedgedx.com/",
         imageUrl: "",
     },
+    {
+        projectId: 11,
+        title: "Discord Clone", 
+        place: "Auckland NZ",
+        projectType: "Full-Stack",
+        date: "October 2024",
+        description: "Using my favourite tech stack for full-stack development, building and deploying a clone of the popular Discord video conferencing app. ",
+        tags: ["NextJs", "ReactJS", "Typescript", "REST API", "Clerk Authentication", "Prisma ORM", "LiveKit", "MySQL", "Aiven DB Hosting", "uploadThing Blob Storage", "Github"],
+        link: "Internal Project",
+        imageUrl: "",
+    },
 ] as const
