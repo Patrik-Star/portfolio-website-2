@@ -154,7 +154,7 @@ export const projectsData = [
         projectType: "Frontend",
         date: "February 2025",
         description: "Migrating a Legacy React project to a modern, high and robust standard to meet customer requirements. ",
-        tags: ["React JS", "CSS", "Typescript", "Storybook", "Jenkins", "Jira", "Storybooks", "Slack", "Github"],
+        tags: ["React JS", "CSS", "Typescript", "Storybook", "Jenkins", "Jira", "Storybooks", "Slack", "Github", "Apple Pay"],
         link: "https://pushpay.com/product/church-giving/",
         imageUrl: "",
     },

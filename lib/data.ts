@@ -106,5 +106,6 @@ export const skillsData = [
   'Intellij',
   'Mulesoft',
   'Anypoint Experience Hub',
-  'Salesforce'
+  'Salesforce',
+  'Apple Pay'
 ] as const;
