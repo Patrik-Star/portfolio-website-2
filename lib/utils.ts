@@ -1,3 +1,5 @@
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
 import { TestimonialItemType } from "./types";
 
 export const validateString = (value: unknown, maxLength: number) => {
@@ -33,3 +35,7 @@ export const shuffleArray = (array: any) => {
     }
     return array;
 };
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
