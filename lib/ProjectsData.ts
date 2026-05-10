@@ -158,4 +158,15 @@ export const projectsData = [
         link: "https://pushpay.com/product/church-giving/",
         imageUrl: "",
     },
+    {
+        projectId: 14,
+        title: "Catalist", 
+        place: "Catalist nz",
+        projectType: "Full Stack",
+        date: "May 2025",
+        description: "Building a complex investment platform to meet customer expectations and requirements in a start-up environment.",
+        tags: ["React JS", "CSS", "Semantic UI", "Javascript", "Typescript", "ExpressJs", "slonik", "PostgresQL", "AWS", "AWS Lambda", "Jira", "Slack", "Github", ],
+        link: "https://www.catalist.co.nz/",
+        imageUrl: "",
+    },
 ] as const
