@@ -1,15 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { projectsData } from "@/lib/ProjectsData";
 import { ChronologicalSwitch } from "@/components/chronologicalSwitch";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import useChat from "../hooks/useChat";
 
 export default function Project() {
   // For Datacom custom border - ${project.place.includes("Datacom") ? "rounded-3xl border-8 border-c-datacom-blue border-double ": ""}
 
   const [chrono, setChrono] = useState(false);
 
-  const sortedProjects = chrono 
-    ? projectsData
-    : [...projectsData].reverse() ;
+  const sortedProjects = chrono ? projectsData : [...projectsData].reverse();
+
+  const {
+    isLoading,
+    stage,
+    setInput,
+    handleSubmit,
+    handleInputChange,
+    messages,
+    input,
+    inputRef,
+    reset,
+  } = useChat();
+
+  const handleSearch = (event: any) => {
+    console.log('value:', event.target.value);
+    setInput(event.target.value);
+  };
 
   return (
     <main className="min-h-screen pb-10 px-5">
@@ -22,6 +41,27 @@ export default function Project() {
         <h2 className="text-lg flex justify-center mb-12 mt-3 ">
           Welcome to my projects page
         </h2>
+
+        <div className="flex relative gap-3">
+          <div className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground">
+            <SearchIcon className="h-4 w-4" />
+          </div>
+          <Input
+            id="search"
+            type="search"
+            placeholder="Search..."
+            className="w-full rounded-lg bg-background pl-8"
+            value={input}
+            onChange={handleInputChange}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleSubmit(e);
+              }
+            }}
+            ref={inputRef}
+          />
+          <Button onClick={handleSubmit}>Search</Button>
+        </div>
 
         <ChronologicalSwitch chrono={chrono} setChrono={setChrono} />
 
@@ -80,5 +120,27 @@ export default function Project() {
         </section>
       </section>
     </main>
+  );
+}
+
+function SearchIcon(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="11" cy="11" r="8" />
+      <path d="m21 21-4.3-4.3" />
+    </svg>
   );
 }
