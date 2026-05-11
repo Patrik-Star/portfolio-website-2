@@ -11,6 +11,8 @@ export const projectsData = [
         date: "August 2021",
         description: "Learnt about new tech such as React and TailwindCSS to build this Portfolio website to help me find new opportunities and promote myself.",
         tags: ["ReactJS", "TailwindCSS", "Netlify", "React-Router", "Github",],
+        longDescription: `
+        `,
         link: "https://github.com/Patrik-Star/my-Portfolio",
         imageUrl: "",
     },
@@ -23,6 +25,7 @@ export const projectsData = [
         "image": "",
         description: "During my internship at Appworx, I developed the iOS version of \"Reach!\" along side the Andriod developer and published it successfully to the Apple iOS app store. ",
         tags: ["Swift", "UI Kit", "Apple", "App store", "iOS", "Mobile", "Apple Compliance", "UI design"],
+        longDescription: '',
         link: "https://appworx.nz/shop/",
         imageUrl: AppworxReachApp,
     },
@@ -34,6 +37,7 @@ export const projectsData = [
         date: "Feburary 2022",
         description: "Writing Infrastructre as code using AWS's CDK to write code in Typescript to deploy infrastructre such as VPC, Subnets, NACL, Security Groups, Databases, EC2 and Lambda function.",
         tags: ["AWS", "AWS CDK", "Typescript", "AWS Architecture", "AWS Lambda"],
+        longDescription: '',
         link: "https://www.orbit.co.nz",
         imageUrl: "",
     },
@@ -45,6 +49,7 @@ export const projectsData = [
         date: "August 2022",
         description: "Doing full-stack development using Java springboot microservice architecture to implement a new feature to their existing application.",
         tags: ["Java", "Java Sprintboot", "VueJS", "Openshift", "PostgresSQL", "PG Admin"],
+        longDescription: '',
         link: "https://wiseemployment.com.au",
         imageUrl: "",
     },
@@ -56,6 +61,7 @@ export const projectsData = [
         date: "August 2022",
         description: "During my time in the Graduate program, I made UI designs in figma following mobile first approach and UI/UX best practices.",
         tags: ["Figma", "UI design", "UX process", "Mentorship", "Mobile"],
+        longDescription: '',
         link: "https://www.supportcrew.co",
         imageUrl: "",
     },
@@ -67,6 +73,7 @@ export const projectsData = [
         date: "September 2022",
         description: "Writing Infrastructre as code in Typescript to use AWS's CDK to deploy resources in AWS such as lambda functions in nodeJS while using Selenium, Deployed using Docker containers.",
         tags: ["AWS", "AWS CDK", "Typescript", "AWS Architecture", "AWS Lambda", "AWS SQS", "AWS SNS", "NodeJs", "DynamoDB", "Selenium", "Docker"],
+        longDescription: '',
         link: "Internal Project",
         imageUrl: AwsArchitectureDiagram,
     },
@@ -78,6 +85,7 @@ export const projectsData = [
         date: "November 2023",
         description: "Updating and maintaining both frontend and backend code for a web application, producing high quality UI and updating our REST API backend to add aditional features. ",
         tags: ["ReactJS", "TailwindCSS", "Typescript", "Cypress testing", "Jest", "Figma", "Jira", "Nodejs", "expressjs", "REST API", "DynamoDB", "Git", "GitHub","Teamwork", "Agile", "Bitbucket", "CI/CD", "Apigee", "Akamai", "Stripe integration"],
+        longDescription: '',
         link: "https://carbonoffsets.nrma.com.au/climate/",
         imageUrl: NrmaCarbonOffset,
     },
@@ -89,6 +97,7 @@ export const projectsData = [
         date: "Jan 2024",
         description: "After feedback and self reflection of my first portfolio website, I felt the need to redo my portfolio website. I was able to improve my UI design and to further help me find new opportunities and promote myself.",
         tags: ["NextJs", "Tailwind CSS", "Typescript", "App Router", "Server Actions", "React Email", "Resend", "Framer Motion", "Vercel Hosting", "Github"], 
+        longDescription: '',
         link: "",
         imageUrl: "",
     },
@@ -100,6 +109,7 @@ export const projectsData = [
         date: "Feb 2024",
         description: "This project was using a no-code platform called Anypoint Experience hub, which was developed by Mulesoft. I was able to deliver an API developer portal using Anypoint Exchange and Experience hub, incorporating Salesforce Identity management.",
         tags: ["Mulesoft", "Anypoint", "Anypoint Exchange", "Anypoint Experience Hub", "Salesforce", "HTML", "CSS"],
+        longDescription: '',
         link: "Internal Project",
         imageUrl: "",
     },
@@ -111,6 +121,7 @@ export const projectsData = [
         date: "June 2024",
         description: "Developing 2 brand new web applications from the ground up to test and validate business proposals. By Using the latest Technology in Full stack development, I was able to build a lightweight, robust, high-performance, customisable and easily scalable full-stack application that incorporates Authentication and database management. ",
         tags: ["NextJs", "TailwindCSS", "Typescript", "Shadcn UI", "Axios", "Vercel", "Teamwork", "Agile"],
+        longDescription: '',
         link: "Internal Project",
         imageUrl: "",
     },
@@ -122,6 +133,7 @@ export const projectsData = [
         date: "September 2024",
         description: "Developing in React, and by writing GraphQL queries, I was able to deliver high performance React components that incorporated server-side validation and pagination So that we can follow industry best practices for frontend developing to insure we deliviered the best solution possible to our customer.",
         tags: ["ReactJS", "Mantine UI", "Typescript", ".NET", "C#", "Figma", "Jira", "GraphQL", "MS SQL", "GitLab","Teamwork", "Agile"],
+        longDescription: '',
         link: "https://www.pacificedgedx.com/",
         imageUrl: "",
     },
@@ -133,6 +145,7 @@ export const projectsData = [
         date: "October 2024",
         description: "Using my favourite tech stack for full-stack development, building and deploying a clone of the popular Discord video conferencing app. ",
         tags: ["NextJs", "ReactJS", "Typescript", "REST API", "Clerk Authentication", "Prisma ORM", "LiveKit", "MySQL", "Aiven DB Hosting", "uploadThing Blob Storage", "Github"],
+        longDescription: '',
         link: "Internal Project",
         imageUrl: "",
     },
@@ -144,6 +157,7 @@ export const projectsData = [
         date: "November 2024",
         description: "Building Industry level Customer Admin Portal at a high and robust standard to meet customer requirements while using modern tools and best Frontend practices.",
         tags: ["React JS", "JSS", "Typescript", "Storybook", "New Relic", "Jenkins", "Jira", "Storybooks", "Slack", "Github"],
+        longDescription: '',
         link: "https://pushpay.com/product/church-giving/",
         imageUrl: "",
     },
@@ -155,6 +169,7 @@ export const projectsData = [
         date: "February 2025",
         description: "Migrating a Legacy React project to a modern, high and robust standard to meet customer requirements. ",
         tags: ["React JS", "CSS", "Typescript", "Storybook", "Jenkins", "Jira", "Storybooks", "Slack", "Github", "Apple Pay"],
+        longDescription: '',
         link: "https://pushpay.com/product/church-giving/",
         imageUrl: "",
     },
@@ -165,8 +180,36 @@ export const projectsData = [
         projectType: "Full Stack",
         date: "May 2025",
         description: "Building a complex investment platform to meet customer expectations and requirements in a start-up environment.",
-        tags: ["React JS", "CSS", "Semantic UI", "Javascript", "Typescript", "ExpressJs", "slonik", "PostgresQL", "AWS", "AWS Lambda", "Jira", "Slack", "Github", ],
-        link: "https://www.catalist.co.nz/",
+        tags: ["React JS", "Semantic UI", "Typescript", "ExpressJs", "slonik", "SQL", "PostgresQL", "AWS", "AWS Lambda", "AWS S3", "AWS IAM", "Jira", "Slack", "Github", ],
+longDescription: `
+**Project Overview:**
+
+Built a complex investment platform enabling users to invest in a wide range of financial products.
+
+**Frontend:**
+- React JS
+- Semantic UI
+- Typescript
+- UI/UX design focused on delivering a seamless user experience
+- Responsive and user-friendly design
+
+**Backend:**
+- ExpressJs
+- slonik (PostgresQL ORM)
+- Robust API interacting with a PostgresQL database
+- Following best practices for security, performance, and scalability
+
+**Cloud & DevOps:**
+- AWS Lambda
+- AWS S3
+- AWS IAM
+
+**Key Achievements:**
+- Successfully delivered a large features that are at a high-quality, meeting customer requirements and expectations.
+- Collaborated effectively with the team in a fast-paced start-up environment.
+- Gained valuable experience in full-stack development, cloud technologies, and startup dynamics.
+
+`,        link: "https://www.catalist.co.nz/",
         imageUrl: "",
     },
 ] as const

@@ -90,6 +90,8 @@ export const skillsData = [
   "AWS Lambda",
   "AWS CDK w/ Typescript",
   'AWS Cloudformation',
+  'AWS S3',
+  'AWS IAM',
   "Other AWS Services",
   "AWS CLI",
   'Python',
