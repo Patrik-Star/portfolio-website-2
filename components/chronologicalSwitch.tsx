@@ -10,7 +10,7 @@ export const ChronologicalSwitch  = ({
   setChrono,
 }: chronologicalSwitchProps) => {
   return (
-    <div className="w-full flex justify-end md:justify-end pb-10 md:pb-5 pt-3">
+    <div className="w-full flex justify-end md:justify-end flex-1 pl-16">
       <div className="shadow rounded-2xl flex p-1 relative items-center bg-gray-200">
         <div
           className={`w-full rounded-xl flex justify-center ${

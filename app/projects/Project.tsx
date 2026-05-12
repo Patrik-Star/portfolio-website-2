@@ -2,14 +2,34 @@ import React, { useState } from "react";
 import { projectsData } from "@/lib/ProjectsData";
 import { ChronologicalSwitch } from "@/components/chronologicalSwitch";
 import { ExpandableCard } from "@/components/expandableCard";
+import { Input } from "@/components/ui/input";
+import { Highlight } from "@/components/Highlight";
+import { CircleX, Icon } from "lucide-react";
 
 export default function Project() {
   // For Datacom custom border - ${project.place.includes("Datacom") ? "rounded-3xl border-8 border-c-datacom-blue border-double ": ""}
 
   const [chrono, setChrono] = useState(false);
-
-  const sortedProjects = chrono ? projectsData : [...projectsData].reverse();
+  const [search, setSearch] = useState("");
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [filterEnabled, setFilterEnabled] = useState(true);
+
+  // Filter and sort projects
+  const sortedProjects = chrono ? projectsData : [...projectsData].reverse();
+  const filteredProjects = sortedProjects.filter((project) => {
+    const searchTerm = search.toLowerCase();
+    if (!searchTerm || searchTerm.length <= 2) return true; // If search is empty or too short, show all projects
+    return (
+      project.title.toLowerCase().includes(searchTerm) ||
+      project.place.toLowerCase().includes(searchTerm) ||
+      project.projectType.toLowerCase().includes(searchTerm) ||
+      project.date.toLowerCase().includes(searchTerm) ||
+      project.description.toLowerCase().includes(searchTerm) ||
+      (project.longDescription && project.longDescription.toLowerCase().includes(searchTerm)) ||
+      (project.tags && project.tags.some((tag: any) => tag.toLowerCase().includes(searchTerm)))
+    );
+  });
+  const projectsToShow = filterEnabled ? filteredProjects : sortedProjects;
 
   return (
     <main className="min-h-screen pb-10 px-5">
@@ -23,11 +43,52 @@ export default function Project() {
           Welcome to my projects page
         </h2>
 
-        <ChronologicalSwitch chrono={chrono} setChrono={setChrono} />
+        {/* Search Bar & Filter Switch */}
+        <div className="flex flex-col md:flex-row items-center justify-between w-full pb-10 md:pb-5 pt-3 gap-4">
+          <div className="flex-1 w-full relative">
+            <Input
+              type="text"
+              placeholder="Search projects..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full bg-white rounded-full dark:bg-zinc-900 border-gray-300 dark:border-zinc-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 shadow-md pr-10"
+            />
+            {search && (
+              <button
+                type="button"
+                aria-label="Clear search"
+                onClick={() => setSearch("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 focus:outline-none"
+                tabIndex={0}
+              >
+                <CircleX className="w-4 h-4"/>
+              </button>
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            <label htmlFor="filter-switch" className="text-sm font-medium select-none cursor-pointer opacity-90">
+              Filter results
+            </label>
+            <button
+              id="filter-switch"
+              type="button"
+              aria-pressed={filterEnabled}
+              onClick={() => setFilterEnabled((enabled) => !enabled)}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${filterEnabled ? 'bg-indigo-600' : 'bg-gray-300'}`}
+            >
+              <span className="sr-only">Toggle filter</span>
+              <span
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${filterEnabled ? 'translate-x-6' : 'translate-x-1'}`}
+              />
+            </button>
+          </div>
+          <ChronologicalSwitch chrono={chrono} setChrono={setChrono} />
+        </div>
+
 
         <section className="grid md:grid-cols-2 gap-8 sm:grid-cols-1">
-          {sortedProjects &&
-            sortedProjects.map((project, index) => (
+          {projectsToShow &&
+            projectsToShow.map((project, index) => (
               <ExpandableCard
                 key={project.projectId}
                 isExpanded={expandedId === project.projectId}
@@ -45,24 +106,26 @@ export default function Project() {
                         dark:text-white/90`}
                 >
                   <div className="">
-                    <h3 className="text-3xl fond-bold mb-2">{project.title}</h3>
+                    <h3 className="text-3xl fond-bold mb-2">
+                      <Highlight text={project.title} highlight={search} />
+                    </h3>
                     <div className="text-xs">
                       <span>
-                        <strong className="font-bold "> Finished on </strong>:{" "}
-                        {project.date}
+                        <strong className="font-bold "> Finished on </strong>: {" "}
+                        <Highlight text={project.date} highlight={search} />
                         {" | "}
                       </span>
                       <span>
-                        <strong className="font-bold">Place</strong>:{" "}
-                        {project.place}
+                        <strong className="font-bold">Place</strong>: {" "}
+                        <Highlight text={project.place} highlight={search} />
                         {" | "}
                       </span>
                       <span>
-                        <strong className="font-bold">Type</strong>:{" "}
-                        {project.projectType}
+                        <strong className="font-bold">Type</strong>: {" "}
+                        <Highlight text={project.projectType} highlight={search} />
                       </span>
                       <p className="mt-6 text-base sm:text-lg leading-relaxed">
-                        {project.description}
+                        <Highlight text={project.description} highlight={search} />
                       </p>
 
                       {/* {project.link !== "Internal Project" ?
@@ -81,7 +144,7 @@ export default function Project() {
                           key={index}
                           className="py-2 px-4 shadow-md rounded-full bg-gray-200 text-gray-700 font-mono text-xs mr-2 mt-2"
                         >
-                          {tag}
+                          <Highlight text={tag} highlight={search} />
                         </div>
                       ))}
                   </div>
