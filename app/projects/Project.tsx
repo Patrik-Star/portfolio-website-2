@@ -12,7 +12,7 @@ export default function Project() {
   const [chrono, setChrono] = useState(false);
   const [search, setSearch] = useState("");
   const [expandedId, setExpandedId] = useState<number | null>(null);
-  const [filterEnabled, setFilterEnabled] = useState(true);
+  const [filterEnabled, setFilterEnabled] = useState(false);
 
   // Filter and sort projects
   const sortedProjects = chrono ? projectsData : [...projectsData].reverse();
@@ -67,7 +67,7 @@ export default function Project() {
           </div>
           <div className="flex items-center gap-2">
             <label htmlFor="filter-switch" className="text-sm font-medium select-none cursor-pointer opacity-90">
-              Filter results
+              {filterEnabled ? "Filtered results" : "All Projects"}
             </label>
             <button
               id="filter-switch"
@@ -97,6 +97,7 @@ export default function Project() {
                 title={project.title}
                 expandedContent={project.longDescription}
                 className="flex flex-col h-auto "
+                tags={project.tags ? [...project.tags] : undefined}
               >
                 {" "}
                 <article
