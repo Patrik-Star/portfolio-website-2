@@ -122,7 +122,7 @@ export const projectsData = [
         description: "Developing 2 brand new web applications from the ground up to test and validate business proposals. By Using the latest Technology in Full stack development, I was able to build a lightweight, robust, high-performance, customisable and easily scalable full-stack application that incorporates Authentication and database management. ",
         tags: ["NextJs", "TailwindCSS", "Typescript", "Shadcn UI", "Axios", "Vercel", "Teamwork", "Agile"],
         longDescription: `
-While working at Datacom, I was able to work on multiple internal POC projects that allowed me to experiment with new technologies and to further improve my full-stack development skills. I was able to build lightweight, robust, high-performance, customisable and easily scalable full-stack applications that incorporates Authentication and database management. These projects allowed me to gain valuable experience in building and deploying full-stack applications using modern technologies and best practices.
+While working at Datacom, I was one of Datacom's **go-to developers for developing internal POC projects**. I was able to work on multiple internal POC projects that allowed me to experiment with new technologies and to further improve my full-stack development skills. I was able to build lightweight, robust, high-performance, customisable and easily scalable full-stack applications that incorporates Authentication and database management. These projects allowed me to gain valuable experience in building and deploying full-stack applications using modern technologies and best practices.
 I was then able to present these projects to the senior leadership team and to other teams in Datacom, which led to further discussions about how we can use these projects as a base for future projects and initiatives in Datacom.
         `,
         link: "Internal Project",
@@ -240,13 +240,14 @@ Delivered large-scale, full-stack features using React and ExpressJS with TypeSc
 - Successfully delivered large features that are at a high-quality, meeting customer requirements and expectations. Features include:
     - **marketplace page** redesign and improvement
     - carousels
-    - Investor signup
-    - Admin dashboard
-    - PDF portfolio exports
+    - Investor signup page
+    - Admin dashboards
+    - PDF portfolio exports and mailing
     - complex database migrations
     - AWS S3 integration for file storage
     - Newsletter emailing sending and filtering  
     - Contributed to Catalist UI/UX design and improvements using Figma
+    - Advanced filtering using SQL for mailing campaigns
 
 - Collaborated effectively with the team in a fast-paced start-up environment.
 - Gained valuable experience in full-stack development, cloud technologies, and startup dynamics.
