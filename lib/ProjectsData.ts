@@ -213,7 +213,7 @@ Working at a large scale company like Pushpay, I was able to gain experience in 
         projectType: "Full Stack",
         date: "May 2025",
         description: "Building a complex investment platform to meet customer expectations and requirements in a start-up environment.",
-        tags: ["React JS", "Semantic UI", "Typescript", "ExpressJs", "slonik", "SQL", "PostgresQL", "AWS", "AWS Lambda", "AWS S3", "AWS IAM", "Jira", "Slack", "Github",],
+        tags: ["React JS", "NextJs", "Semantic UI", "Typescript", "ExpressJs", "slonik", "SQL", "PostgresQL", "AWS", "AWS Lambda", "AWS S3", "AWS IAM", "Jira", "Slack", "Github", "Docker", "Figma", "UI/UX design"],
         longDescription: `
 
 Delivered large-scale, full-stack features using React and ExpressJS with TypeScript. Led database migrations and implemented cloud solutions with AWS. Managed complex requirements and shipped robust solutions in a fast-paced start-up environment.
@@ -248,6 +248,10 @@ Delivered large-scale, full-stack features using React and ExpressJS with TypeSc
     - Newsletter emailing sending and filtering  
     - Contributed to Catalist UI/UX design and improvements using Figma
     - Advanced filtering using SQL for mailing campaigns
+    - exploring new development processes and pipelines.
+    - exploring new npm packages 
+    - exploring new usage of AI for development
+    - Raising potential risks in the current Way of Working and development process
 
 - Collaborated effectively with the team in a fast-paced start-up environment.
 - Gained valuable experience in full-stack development, cloud technologies, and startup dynamics.
