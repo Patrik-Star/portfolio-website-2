@@ -36,12 +36,20 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Full-stack Software Engineer",
+    location: "Catalist",
+    description:
+      "Delivering high-quality features to manage, update and improve the Catalist stock exchange platform for our customers and our New Zealand investors",
+    icon: React.createElement(CgWorkAlt),
+    date: "Apr 2025 - present",
+  },
+  {
     title: "Full-Stack Developer",
     location: "Datacom NZ",
     description:
-      "Working with numerous clients to deliver high quaility software products.",
+      "Working with numerous clients to deliver high-quality software products.",
     icon: React.createElement(CgWorkAlt),
-    date: "2022 - present",
+    date: "2022 - Apr 2025",
   },
   {
     title: "Graduated University",
@@ -109,5 +117,9 @@ export const skillsData = [
   'Mulesoft',
   'Anypoint Experience Hub',
   'Salesforce',
-  'Apple Pay'
+  'Apple Pay',
+  'Semantic UI',
+  'PostgreSQL',
+  'Slonik',
+  'DB migrations',
 ] as const;

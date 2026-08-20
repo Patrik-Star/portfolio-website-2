@@ -10,6 +10,7 @@ type ProjectsProps = (typeof projectsData)[number];
 export default function ProjectCard({ title, place, projectType, date, description, tags, link, imageUrl }: ProjectsProps) {
 
     const ref = useRef<HTMLDivElement>(null);
+    const imageHref = typeof imageUrl === "string" ? imageUrl : imageUrl?.src;
 
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -17,7 +18,7 @@ export default function ProjectCard({ title, place, projectType, date, descripti
     })
     const scaleProgress  = useTransform(scrollYProgress, [0, 1], [0.8, 1])
     const opacityProgress  = useTransform(scrollYProgress, [0, 1], [0.6, 1])
-
+    
     return (
         <motion.div ref={ref}
             style={{
@@ -30,6 +31,7 @@ export default function ProjectCard({ title, place, projectType, date, descripti
                 <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[70%] flex flex-col h-full sm:group-even:ml-64">
                     <h3 className='text-2xl font-semibold '>{title}</h3>
                     <p className='mt-2 leading-relaxed text-gray-700 dark:text-white/70'>{description}</p>
+                    {link && link !== 'Internal Project' && <a href={link} className='mt-2 underline text-blue-500'>View</a>}
                     <ul className='flex flex-wrap mt-4 gap-2 sm:mt-auto'>
                         {tags.map((tag, index) => (
                             <li key={index} className='bg-black/[0.7] px-3 py-1 text-xs uppercase tracking-wider text-white rounded-full dark:text-white/70'>{tag}</li>
@@ -38,6 +40,11 @@ export default function ProjectCard({ title, place, projectType, date, descripti
                 </div>
                 <Image
                     src={imageUrl} alt="Project I worked on"
+                    onClick={() => {
+                        if (imageHref) {
+                            window.open(imageHref, "_blank", "noopener,noreferrer");
+                        }
+                    }}
                     quality={95}
                     className='absolute top-10 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
                                 group-even:-right-[initial] 

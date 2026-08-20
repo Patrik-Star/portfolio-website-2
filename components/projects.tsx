@@ -7,7 +7,7 @@ import { useSectionInView } from '@/lib/hooks'
 import Link from 'next/link'
 
 export default function Projects() {
-    const projectIdArray = [6, 5, 1];
+    const projectIdArray = [14, 5, 1, 6];
     const { ref } = useSectionInView('Projects', 0.5);
 
     return (

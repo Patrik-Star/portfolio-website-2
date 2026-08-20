@@ -1,6 +1,7 @@
 import NrmaCarbonOffset from "@/public/NrmaCarbonOffset.png"
 import AppworxReachApp from "@/public/AppworxReachApp.png"
 import AwsArchitectureDiagram from "@/public/AwsArchitectureDiagram.png"
+import Catalist from "@/public/CatalistScreenshot.png"
 
 export const projectsData = [
     {
@@ -212,7 +213,7 @@ Working at a large scale company like Pushpay, I was able to gain experience in 
         place: "Catalist nz",
         projectType: "Full Stack",
         date: "May 2025",
-        description: "Building a complex investment platform to meet customer expectations and requirements in a start-up environment.",
+        description: "Delivering high-quality features to manage, update and improve the Catalist stock exchange platform for our customers and our New Zealand investors",
         tags: ["React JS", "NextJs", "Semantic UI", "Typescript", "ExpressJs", "slonik", "SQL", "PostgresQL", "AWS", "AWS Lambda", "AWS S3", "AWS IAM", "Jira", "Slack", "Github", "Docker", "Figma", "UI/UX design"],
         longDescription: `
 
@@ -257,6 +258,6 @@ Delivered large-scale, full-stack features using React and ExpressJS with TypeSc
 - Gained valuable experience in full-stack development, cloud technologies, and startup dynamics.
 
 `,  link: "https://www.catalist.co.nz/",
-    imageUrl: "",
+    imageUrl: Catalist,
     },
 ] as const
